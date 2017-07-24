@@ -1,2 +1,2 @@
 # muhtarCMS
-Derse gec gelenllerin borclarininin tutuldugu vulnerable icerik yonetim sistemi
+Derse gec gelenlerin borclarininin tutuldugu vulnerable icerik yonetim sistemi
