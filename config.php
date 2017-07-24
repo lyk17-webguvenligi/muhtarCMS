@@ -1,5 +1,4 @@
 <?php
-if (time() % 7 == 0) die("<h1>undefined is not a function</h1>");
 /**
  * Created by PhpStorm.
  * User: element
