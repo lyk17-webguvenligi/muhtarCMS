@@ -20,7 +20,7 @@ if ($loggedUser['isAdmin'])
     echo '<a href="admin.php">admin paneli</a>';
 
 echo '<br>';
-echo '<a href="logout.php">cikis yap</a>';
+echo '<a href="logout.php?csrf_token=' . urlencode($_SESSION['csrf_token']) . '">cikis yap</a>';
 echo '<br>';
 
 if ($count) {

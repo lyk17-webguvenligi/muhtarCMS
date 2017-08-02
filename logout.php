@@ -8,6 +8,8 @@
 
 require 'config.php';
 
+controlCsrfToken('GET');
+
 session_destroy();
 
 header('Location: login.php');

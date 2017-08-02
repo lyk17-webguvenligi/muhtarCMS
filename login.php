@@ -8,6 +8,8 @@
 
 require 'config.php';
 
+controlCsrfToken();
+
 if (isset($_POST['username']) && isset($_POST['password'])) {
     $username = $_POST['username'];
     $password = md5($_POST['password']);
@@ -31,6 +33,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 ?>
 
 <form action="" method="post">
+    <?php printTokenInput() ?>
     username <input type="text" name="username"><br>
     password <input type="password" name="password"><br>
     <input type="submit">
