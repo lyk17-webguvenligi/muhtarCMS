@@ -11,13 +11,15 @@ require 'config.php';
 if (!$loggedUser['isAdmin'])
     die('baba senin yetkin yok ya');
 
+
+controlCsrfToken();
+
 $query = $db->prepare("select * from users");
 $query->execute();
 $results = $query->fetchAll(PDO::FETCH_ASSOC);
 
 
 if (isset($_POST['user_id']) && isset($_POST['price'])) {
-
     $user_id = $_POST['user_id'];
     $price = $_POST['price'];
     $date = date('Y-m-d');
@@ -33,6 +35,7 @@ if (isset($_POST['user_id']) && isset($_POST['price'])) {
 ?>
 
 <form action="" method="post">
+    <?php printTokenInput(); ?>
     <select name="user_id" id="">
         <?php
         foreach ($results as $result) {
